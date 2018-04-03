@@ -235,7 +235,7 @@ public class Mainform extends javax.swing.JFrame {
         });
         getContentPane().add(btnVolumeUp, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 10, 64, 64));
 
-        jButton2.setIcon(new javax.swing.ImageIcon("C:\\Users\\AMMUYUTAN\\Desktop\\Mallari\\backk.png")); // NOI18N
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/if_arrow-back_216437.png"))); // NOI18N
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -717,7 +717,9 @@ public class Mainform extends javax.swing.JFrame {
     }//GEN-LAST:event_btnRideCymbalActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        clip.stop();
+        if(clip!=null){
+            clip.stop();
+        }
         new WelcomePage().setVisible(true);
          this.setVisible(false);
          
