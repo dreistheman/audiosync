@@ -41,6 +41,8 @@ public class Mainform extends javax.swing.JFrame {
     boolean state;
     Action click;
     static int volume = -20;
+    static String soundPath = "C:\\Users\\Danny\\Documents\\Andre\\Developer files\\NetBeansProjects\\AudioSync\\src\\sound\\";
+    static String imagesPath = "C:\\Users\\Danny\\Documents\\Andre\\Developer files\\NetBeansProjects\\AudioSync\\src\\images\\";
 //    static boolean isPressed = false;
     
     public Mainform() {
@@ -270,10 +272,10 @@ public class Mainform extends javax.swing.JFrame {
             public void run(){
                while(true){
                 if(btnSnareDrum.getModel().isPressed() == true) {
-                    btnSnareDrum.setIcon(new ImageIcon("C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\images\\snareDrumIcon2.png"));
+                    btnSnareDrum.setIcon(new ImageIcon(imagesPath + "snareDrumIcon2.png"));
                 }
                 else{
-                    btnSnareDrum.setIcon(new ImageIcon("C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\images\\kulayyy.png"));    
+                    btnSnareDrum.setIcon(new ImageIcon(imagesPath + "kulayyy.png"));    
                 }
                }
             }
@@ -292,10 +294,10 @@ public class Mainform extends javax.swing.JFrame {
                 while(true){
                 if(btnBassDrum.getModel().isPressed()){
                    
-                     btnBassDrum.setIcon(new ImageIcon("C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\images\\bassDrumIcon.png"));
+                     btnBassDrum.setIcon(new ImageIcon(imagesPath + "bassDrumIcon.png"));
                 }
                 else{
-                     btnBassDrum.setIcon(new ImageIcon("C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\images\\bassDrumIcon2.png"));
+                     btnBassDrum.setIcon(new ImageIcon(imagesPath + "bassDrumIcon2.png"));
                     
                 }
                 
@@ -315,10 +317,10 @@ public class Mainform extends javax.swing.JFrame {
                 
                if(btnFloorTom.getModel().isPressed()){
                    
-                    btnFloorTom.setIcon(new ImageIcon("C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\images\\floorTomIcon2.png"));
+                    btnFloorTom.setIcon(new ImageIcon(imagesPath + "floorTomIcon2.png"));
                 }
                else {
-                   btnFloorTom.setIcon(new ImageIcon("C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\images\\floorTomIcon.png"));
+                   btnFloorTom.setIcon(new ImageIcon(imagesPath + "floorTomIcon.png"));
                 }
                 }
             }
@@ -345,13 +347,13 @@ public class Mainform extends javax.swing.JFrame {
             public void run(){
                 while(true){
                 if(btnRackTom.getModel().isPressed()){
-                   btnRackTom.setIcon(new ImageIcon("C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\images\\rackTomIcon2.png"));
+                   btnRackTom.setIcon(new ImageIcon(imagesPath + "rackTomIcon2.png"));
                 }
                 //else if(btnRackTom.getModel().isPressed() == true){
                 //    btnRackTom.setIcon(new ImageIcon("C:\\Users\\AMMUYUTAN\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\images\\gray.png"));
                 //}
                 else{
-                    btnRackTom.setIcon(new ImageIcon("C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\images\\rackTomIcon.png"));
+                    btnRackTom.setIcon(new ImageIcon(imagesPath + "rackTomIcon.png"));
                 }
                 }
             }
@@ -365,11 +367,11 @@ public class Mainform extends javax.swing.JFrame {
             public void run(){
                 while(true){
                 if(btnMiddleTom.getModel().isPressed()){
-                   btnMiddleTom.setIcon(new ImageIcon("C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\images\\middleTomIcon2.png"));
+                   btnMiddleTom.setIcon(new ImageIcon(imagesPath + "middleTomIcon2.png"));
                 }
                 
                 else{
-                    btnMiddleTom.setIcon(new ImageIcon("C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\images\\middleTomIcon.png"));
+                    btnMiddleTom.setIcon(new ImageIcon(imagesPath + "middleTomIcon.png"));
                 }
                 }
             }
@@ -530,7 +532,7 @@ public class Mainform extends javax.swing.JFrame {
 
     private void btnFloorTomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFloorTomActionPerformed
         try {
-            music=new FileInputStream(new File("C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\sound\\tf4.wav"));
+            music=new FileInputStream(new File(soundPath + "tf4.wav"));
             AudioStream audios=new AudioStream(music);
             AudioPlayer.player.start(audios);
         } catch (Exception ex) {
@@ -550,7 +552,7 @@ public class Mainform extends javax.swing.JFrame {
 
     private void btnRackTomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRackTomActionPerformed
         try {
-            music=new FileInputStream(new File("C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\sound\\ta1.wav"));
+            music=new FileInputStream(new File(soundPath + "ta1.wav"));
             AudioStream audios=new AudioStream(music);
             AudioPlayer.player.start(audios);
         } catch (Exception ex) {
@@ -560,7 +562,7 @@ public class Mainform extends javax.swing.JFrame {
 
     private void btnMiddleTomActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMiddleTomActionPerformed
         try {
-            music=new FileInputStream(new File("C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\sound\\ta2.wav"));
+            music=new FileInputStream(new File(soundPath + "ta2.wav"));
             AudioStream audios=new AudioStream(music);
             AudioPlayer.player.start(audios);
         } catch (Exception ex) {
@@ -601,7 +603,7 @@ public class Mainform extends javax.swing.JFrame {
         fileChooser.setFileFilter(wavFilter);
         fileChooser.setDialogTitle("Open Audio File");
 	fileChooser.setAcceptAllFileFilterUsed(false);
-        fileChooser.setCurrentDirectory(new File("C:\\Users\\AMMUYUTAN\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\sound\\Songs"));
+        fileChooser.setCurrentDirectory(new File("C:\\Users\\Danny\\Documents\\Andre\\Developer files\\NetBeansProjects\\AudioSync\\src\\sound\\Songs"));
         int returnVal = fileChooser.showOpenDialog(getParent());
         if(returnVal == JFileChooser.APPROVE_OPTION) {
         System.out.println("You chose to open this file: " + fileChooser.getSelectedFile().getName());
@@ -621,13 +623,13 @@ public class Mainform extends javax.swing.JFrame {
         clipTime = clip.getMicrosecondPosition();
         
          if (state == false){
-                btnPlay.setIcon(new ImageIcon("C:\\Users\\AMMUYUTAN\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\images\\playIcon.png"));
+                btnPlay.setIcon(new ImageIcon(imagesPath + "playIcon.png"));
                 state = true;
                 clip.stop();
                 
             }
                     else if (state == true){
-                        btnPlay.setIcon(new ImageIcon("C:\\Users\\AMMUYUTAN\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\images\\pauseIcon.png"));
+                        btnPlay.setIcon(new ImageIcon(imagesPath + "pauseIcon.png"));
                         state = false;
                         clip.setMicrosecondPosition(clipTime);
                         System.out.println(clipTime);

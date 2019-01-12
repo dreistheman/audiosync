@@ -7,13 +7,15 @@ package proj;
 
 
 public class Sound {
-    public static String roses = "C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\sound\\Roses.wav";
-    public static String bassSound = "C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\sound\\kick_drum.WAV";
-    public static String crashSound = "C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\sound\\crash.wav";
-    public static String snareSound = "C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\sound\\s1.WAV";
-    public static String hihatSound = "C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\sound\\hihat.WAV";
-    public static String rackTomSound = "C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\sound\\Rack_Tom.WAV";
-    public static String floorTomSound = "C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\sound\\floortom-acoustic01.WAV";
-    public static String rideSound = "C:\\Users\\Andre\\Documents\\Java Specialization\\CS182P\\AudioSync\\src\\sound\\ride2.wav";
+    
+    public static String soundPath = "C:\\Users\\Danny\\Documents\\Andre\\Developer files\\NetBeansProjects\\AudioSync\\src\\sound\\";
+    public static String roses = soundPath+"Roses.wav";
+    public static String bassSound = soundPath + "kick_drum.WAV";
+    public static String crashSound = soundPath + "crash.wav";
+    public static String snareSound = soundPath+ "s1.WAV";
+    public static String hihatSound = soundPath + "hihat.WAV";
+    public static String rackTomSound = soundPath + "Rack_Tom.WAV";
+    public static String floorTomSound = soundPath + "floortom-acoustic01.WAV";
+    public static String rideSound = soundPath + "ride2.wav";
 
 }
